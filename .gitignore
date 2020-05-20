@@ -1,0 +1,8 @@
+
+\.idea/
+
+\.python-version
+
+pytest_tools\.egg-info/
+
+poetry\.lock

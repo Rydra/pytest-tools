@@ -1,12 +1,22 @@
 [tool.poetry]
-name = "pyvaru"
-version = "0.3.1"
-description = "Rule based data validation library for python."
-authors = ["Davide Zanotti <davidezanotti@gmail.com>"]
-repository = "https://github.com/Rydra/pyvaru"
+name = "pytest-tools"
+version = "0.0.1"
+description = "A bunch of test utilities for easier testing."
+authors = ["David Jimenez <davigetto@gmail.com>"]
+repository = "https://github.com/Rydra/pytest-utils"
+license = "MIT"
+packages = [
+    { include = "pytest_tools", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.7.0"
+funcy = "^1.14"
+pytest-datadir = "^1.3.1"
+pyhamcrest = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.3.3"
 
 [build-system]
 requires = ["poetry>=0.12"]
