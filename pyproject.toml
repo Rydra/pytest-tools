@@ -9,6 +9,9 @@ packages = [
     { include = "pytest_tools", from = "src" }
 ]
 
+[tool.poetry.plugins."pytest11"]
+"pytest-tools" = "pytest_tools.plugin"
+
 [tool.poetry.dependencies]
 python = "^3.7.0"
 funcy = "^1.14"

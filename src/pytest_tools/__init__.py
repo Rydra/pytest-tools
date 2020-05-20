@@ -18,17 +18,6 @@ acceptancetest = pytest.mark.acceptancetest
 integrationtest = pytest.mark.integrationtest(acceptancetest)
 
 
-@pytest.fixture
-def request_loader(datadir):
-    def get_filecontents(request_filename):
-        if '.graphql' not in request_filename:
-            request_filename = request_filename + '.graphql'
-
-        return (datadir / f'requests/{request_filename}').read_text()
-
-    return get_filecontents
-
-
 class HasStatusCode(BaseMatcher):
     def __init__(self, status_code):
         self.status_code = status_code
