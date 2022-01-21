@@ -20,3 +20,7 @@ pyhamcrest = "^2.0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.3.3"
+
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
